@@ -1,0 +1,4 @@
+token: <github_token>
+repos:
+  - repo: user/repo
+    users: [user1, user2, user3]

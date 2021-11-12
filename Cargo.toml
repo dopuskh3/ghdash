@@ -1,0 +1,25 @@
+[package]
+name = "ghdash"
+version = "0.1.0"
+authors = ["Francois Visconte <francois.visconte@datadoghq.com>"]
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.0"
+timeago = "0.3.0"
+structopt = "0.3.13"
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = { version = "0.8", optional = true }
+octocrab = "0.12"
+tokio = { version = "1.6.1", default-features = false, features = ["macros", "rt-multi-thread", "time"] }
+
+[dev-dependencies]
+serde_derive = "^1.0"
+
+[dependencies.confy]
+version = "0.4.0"
+features = ["yaml_conf"]
+default-features = false
+
+[patch.crates-io]
+confy = { git = 'https://github.com/rust-cli/confy' }
